@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!--Import materialize.css-->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="css/materialize.min.css"
+      media="screen,projection"
+    />
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
+    <script
+      defer=""
+      src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"
+    ></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://mauriciopoppe.github.io/function-plot/js/function-plot.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chaine de Transmission</title>
+  </head>
+
+  <body>
+     <!-- Header section -->
+     <section class="section-header">
+      <div class="row">
+          <div class="col s3" >
+              <div id="fsr-logo" class="center">
+                  <img src="img/fsr logo.jpg" alt="">
+              </div>
+          </div>
+          <div class="col s6 ">
+              <h3 class="center">Chaine de Transmission</h2>
+              <p class="center">Realise par: Bilal Essofyany</p>
+              <p class="center">2019/2020</p>
+              </div>
+          <div class="col s3 ">
+              <div class="center" id="mit-logo">
+                  <img src="/img/master logo.png" alt="">
+              </div>
+          </div>
+      </div>
+  </section>
+
+    <!-- body -->
+    <div class="container">
+      <!-- Message generator -->
+      <div class="row">
+        <div class="col s12 center">
+          <div class="block">
+            <h4>Meassage generator</h4>
+            <div class="chart">
+              <canvas id="message" width="500" height="300" ></canvas>
+            </div>
+            <div class="bottons">
+              <a href="" class="btn" id="msg-generator">Regenerate</a>
+              <a href="#!" class="btn">Info</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- transition arrow -->
+      <div class="row" id="arrow">
+        <img src="/img/down.png" alt="" />
+      </div>
+      <!-- Code en ligne -->
+      <div class="row">
+        <div class="col s12 center">
+          <div class="block">
+            <h4>Code en Ligne</h4>
+            <div class="chart">
+              <canvas id="code-en-ligne" width="500" height="300" ></canvas>
+            </div>
+            <div class="bottons">
+              <a href="#!" class="btn" id="nrz"> NRZ</a>
+              <a href="#!" class="btn" id="biphaser"> Biphaser</a>
+              <a href="#!" class="btn" id="bipolair"> Bipolair</a>
+              <a href="#!" class="btn">Info</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- transition arrow -->
+      <div class="row" id="arrow">
+        <img src="/img/down.png" alt="" />
+      </div>
+      <!-- Filtre de Emission -->
+      <div class="row">
+        <div class="col s12 center">
+          <div class="block">
+            <h4>Filtre d'Emission</h4>
+            <div class="chart">
+              <canvas></canvas>
+            </div>
+            <div class="bottons">
+              <a href="#!" class="btn">F-Blanchissant</a>
+              <a href="#!" class="btn">F-de Nyquist</a>
+              <a href="#!" class="btn">Info</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- transition arrow -->
+      <div class="row" id="arrow">
+        <img src="/img/down.png" alt="" />
+      </div>
+      <!-- Modulation -->
+      <div class="row">
+        <div class="col s12 center">
+          <div class="block">
+            <h4>Modulation</h4>
+            <div class="chart">
+              <canvas></canvas>
+            </div>
+            <div class="bottons">
+              <a href="#!" class="btn">ASK</a>
+              <a href="#!" class="btn">PSK</a>
+              <a href="#!" class="btn">QPSK</a>
+              <a href="#!" class="btn">FSK</a>
+              <a href="#!" class="btn">Info</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- transition arrow -->
+      <div class="row" id="arrow">
+        <img src="/img/down.png" alt="" />
+      </div>
+      <!-- Canal de transmission -->
+      <div class="row">
+        <div class="col s12 center">
+          <div class="block">
+            <h4>Canal de Transmission</h4>
+            <div class="chart">
+              <canvas></canvas>
+            </div>
+            <div class="bottons">
+              <a href="#!" class="btn">ajouter des bruit</a>
+              <a href="#!" class="btn">Info</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- transition arrow -->
+      <div class="row" id="arrow">
+        <img src="/img/down.png" alt="" />
+      </div>
+      <!-- Demodulation -->
+      <div class="row">
+        <div class="col s12 center">
+          <div class="block">
+            <h4>Demodulation</h4>
+            <div class="chart">
+              <canvas></canvas>
+            </div>
+            <div class="bottons">
+              <a href="#!" class="btn">Regenerate</a>
+              <a href="#!" class="btn">Info</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- transition arrow -->
+      <div class="row" id="arrow">
+        <img src="/img/down.png" alt="" />
+      </div>
+      <!-- Filtre de Reception -->
+      <div class="row">
+        <div class="col s12 center">
+          <div class="block">
+            <h4>Filtre de Reception</h4>
+            <div class="chart">
+              <canvas></canvas>
+            </div>
+            <div class="bottons">
+              <a href="#!" class="btn">Regenerate</a>
+              <a href="#!" class="btn">Info</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- transition arrow -->
+      <div class="row" id="arrow">
+        <img src="/img/down.png" alt="" />
+      </div>
+      <!-- Decision -->
+      <div class="row">
+        <div class="col s12 center">
+          <div class="block">
+            <h4>Decision</h4>
+            <div class="chart">
+              <canvas></canvas>
+            </div>
+            <div class="bottons">
+              <a href="#!" class="btn">Regenerate</a>
+              <a href="#!" class="btn">Info</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- transition arrow -->
+      <div class="row" id="arrow">
+        <img src="/img/down.png" alt="" />
+      </div>
+      <!-- Message Recue -->
+      <div class="row">
+        <div class="col s12 center">
+          <div class="block">
+            <h4>Message Recue</h4>
+            <div class="chart">
+              <canvas></canvas>
+            </div>
+            <div class="bottons">
+              <a href="#!" class="btn">Regenerate</a>
+              <a href="#!" class="btn">Info</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Import jQuery before materialize.js-->
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+    ></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script>
+      $(document).ready(function () {});
+    </script>
+    <script src="/js/code_en_ligne.js"></script>
+    <script src="/js/functions.js"></script>
+    <script src="/js/charts.js"></script>
+  </body>
+</html>
