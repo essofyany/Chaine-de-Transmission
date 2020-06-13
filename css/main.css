@@ -1,0 +1,54 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.section-header{
+    padding: 0;
+    background-color: white;
+}
+#fsr-logo img{
+    width: 35%;
+}
+#mit-logo  img{
+    width: 25%;
+    margin-top: 30px;
+}
+
+.block{
+    margin: auto ;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center ;
+    background-color: grey; 
+    width: 800px; 
+    height: 500px; 
+    border: black 5px solid; 
+    color: white;
+}
+
+.chart{
+    margin: auto ;
+    width: 600px; 
+    height: 400px;
+    background-color: white; 
+    border: rgb(46, 23, 23) 5px solid;
+}
+
+.bottons{
+    margin-top: 5px;
+}
+.bottons a{
+    background-color: brown;
+}
+
+#arrow{
+    display: flex;
+    justify-content: center;
+}
+#arrow img{
+    width: 20%;
+}
